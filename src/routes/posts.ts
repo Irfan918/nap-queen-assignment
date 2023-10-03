@@ -1,4 +1,3 @@
-// src/routes/posts.ts
 import express, { Router, Request, Response } from 'express';
 import { validationResult, body, param } from 'express-validator';
 import Post, { IPost } from '../models/Post';
@@ -45,7 +44,6 @@ router.post('/create', [
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
   }
-
   try {
     const { title, content, category_id } = req.body;    
     const post = new Post({ title, content, category_id });
