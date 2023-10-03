@@ -9,9 +9,9 @@ const app: Application = express();
 
 
 const PORT = process.env.PORT || 3000;
-const mongodbUri = process.env.MONGODB_URI
+//const mongodbUri = process.env.MONGODB_URI
 
-connect('mongodbUri')
+connect('mongodb+srv://irfanmi991899:miirfan@cluster0.tegumqw.mongodb.net/?retryWrites=true&w=majority')
     .then(()=> {
       console.log("succesfully connected");
     }).catch((error:any)=>{
